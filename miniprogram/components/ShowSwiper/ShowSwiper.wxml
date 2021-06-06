@@ -1,0 +1,24 @@
+<!--components/ShowSwiper/ShowSwiper.wxml-->
+<view class="mainview_swiper">
+<swiper
+indicator-dots indicator-color='#1296DB' 
+indicator-active-color='#fff' 
+autoplay 
+interval='2000'
+circular
+>
+    <swiper-item wx:for="{{swiperList}}" wx:key="num">
+        <image src="{{item.url}}" mode="widthFix"></image>
+    </swiper-item> 
+ 
+<!-- <swiper-item>
+        <image src="../../images/swiper02.jpg" mode="widthFix"></image>
+    </swiper-item> 
+    <swiper-item>
+        <image src="../../images/swiper01.jpg" mode="widthFix"></image>
+    </swiper-item> 
+    <swiper-item> 
+        <image src="../../images/swiper03.jpg" mode="widthFix"></image>
+    </swiper-item>  --> 
+</swiper> 
+</view>

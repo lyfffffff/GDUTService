@@ -1,0 +1,27 @@
+//app.js
+App({
+  //onLaunch,onShow: options(path,query,scene,shareTicket,referrerInfo(appId,extraData))
+  onLaunch: function(options) {
+    
+  },
+  onShow: function(options) {
+
+  },
+  onHide: function() {
+
+  },
+  onError: function(msg) {
+
+  },
+  //options(path,query,isEntryPage)
+  onPageNotFound: function(options) {
+
+  },
+  globalData: {
+    username:"微信用户",
+    canIuse:false,
+    cates_name:"",
+    avatarUrl:"",
+  }
+});
+  

@@ -1,0 +1,40 @@
+<view class="cates">
+  <SearchInput></SearchInput>
+  <view class="cates_container">
+  <scroll-view class="left_menu" scroll-y="false" id="left">
+  <view wx:for="{{leftMenuList}}" wx:key="*this" 
+  bindtap="getInformationByCate" id="{{item}}" 
+  class="menu_item {{(Click==index)?'click':'unclick'}}"
+  data-index="{{index}}"
+  >{{item}}</view>
+  </scroll-view>
+    <scroll-view class="right_content" scroll-y > 
+      <navigator class="info_main"  wx:for="{{infoList}}" wx:key="info_id" url="/pages/detail/detail?info_id={{item.info_id}}&username={{item.username}}&info_title={{item.info_title}}&info_content={{item.info_content}}&info_phone={{item.info_phone}}&info_price={{item.info_price}}&info_datestart={{item.info_datestart}}&info_dateend={{item.info_dateend}}&cates_name={{item.cates_name}}">
+        <!-- {{(Click==index)?'click':'unclick'}} -->
+        <!-- 头像和微信昵称 -->
+        <view class="left_info">
+      <image src="../../images/default_Avatar.png" mode="widthFix"></image>
+      <view class='defaultName'>{{item.username}}</view>
+        </view>
+        <!-- 标题和内容 -->
+        <view class="right_info">
+          <view class="info_title">{{item.info_title}}
+          </view>
+          <p class="info_content">{{item.info_content}}</p>
+        </view>
+      </navigator>
+
+      <!-- <view class="info_main" >
+        <view class="left_info">
+      <image src="../../images/default_Avatar.png" mode="widthFix"></image>
+      <view class='defaultName'>xixi</view>
+        </view>
+        <view class="right_info">
+          <view class="info_title">???
+          </view>
+          <p class="info_content">真是的没有啦真的即使死的互动收到就爱厚度好撒谎度考核断货大概要多大的积极的卡哇伊阿德二二突突突</p>
+        </view>
+      </view> -->
+    </scroll-view>
+  </view>
+</view>

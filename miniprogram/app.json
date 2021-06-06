@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/mainview/mainview",
+    "pages/community/community",
+    "pages/search/search",
+    "pages/publish/publish",
+    "pages/index/index",
+    "pages/login/login",
+    "pages/regist/regist",
+    "pages/feedback/feedback",
+    "pages/author/author",
+    "pages/mypublish/mypublish",
+    "pages/detail/detail",
+    "pages/update/update",
+    "pages/mycollect/mycollect"
+  ], 
+  "window": { 
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1296DB",
+    "navigationBarTitleText": "GDUT校园综合服务",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+    { 
+      "pagePath": "pages/mainview/mainview",
+      "text": "首页",
+      "iconPath": "./images/search.png",
+      "selectedIconPath": "./images/_search.png"
+    },
+    {
+      "pagePath": "pages/community/community",
+      "text": "社区",
+      "iconPath": "./images/community.png",
+      "selectedIconPath": "./images/_community.png"
+    },
+    {
+      "pagePath": "pages/publish/publish",
+      "text": "发布",
+      "iconPath": "./images/publish.png",
+      "selectedIconPath": "./images/_publish.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "我的",
+      "iconPath": "./images/home.png",
+      "selectedIconPath": "./images/_home.png"
+    }
+  ],
+  "color": "#5E616D",
+  "selectedColor": "#1296DB"
+  }
+}

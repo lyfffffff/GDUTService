@@ -1,0 +1,22 @@
+<!--pages/login/login.wxml-->
+
+<view wx:if="{{canGetInfo}}">
+<view class='totalView'>
+  <view class='imageView'>
+<image class='vxLogo' src='../../images/applet_Logo.jpg' mode='scaleToFill'></image>
+  </view>
+<view class='titleText'>申请获取以下权限</view>
+<view class='contentText'>获得你的公开信息(昵称,头像,手机等)</view>
+<view class="toLogin">
+<navigator class='button' url='/pages/login/login'>
+      <view  class='toLogin'>登录</view>
+    </navigator>
+    <navigator class='button' url='/pages/regist/regist'>
+      <view  class='toLogin'>注册</view>
+    </navigator>
+</view>
+</view>
+</view>
+<view wx:else>
+请升级微信版本
+</view>

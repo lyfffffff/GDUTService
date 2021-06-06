@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ShowSwiper":"../../components/ShowSwiper/ShowSwiper"
+},
+  "navigationBarTitleText":"修改信息" 
+}

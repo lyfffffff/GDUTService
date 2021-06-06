@@ -1,0 +1,8 @@
+<!-- <text>这是收藏页面</text> -->
+<view class="search_row">
+<input type="text" placeholder="请输入搜索内容" bindinput="handleInput" value="{{inputValue}}"></input>
+<button hidden="{{!isFocus}}" bindtap="handleCancel">取消</button>
+</view>
+<view class="search_content">
+<navigator class="search_item" wx:for="{{infoList}}" wx:key="info_id" url="/pages/detail/detail?info_id={{item.info_id}}&username={{item.username}}&info_title={{item.info_title}}&info_content={{item.info_content}}&info_phone={{item.info_phone}}&info_price={{item.info_price}}&info_datestart={{item.info_datestart}}&info_dateend={{item.info_dateend}}&cates_name={{item.cates_name}}">{{item.info_content}}</navigator>
+</view>

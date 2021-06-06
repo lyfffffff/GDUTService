@@ -1,0 +1,40 @@
+<!--pages/community/mainview.wxml-->
+<!-- 要求：所有数据都储存在数据库中，而前端要做的时将数据渲染在页面上 -->
+<view>
+ <!-- 搜索栏 -->
+<SearchInput></SearchInput>
+<!-- 搜索栏结束 -->
+
+ <!-- 轮播图开始 -->
+ <ShowSwiper></ShowSwiper>
+<!-- 轮播图结束-->
+
+<!-- 导航栏开始 -->
+<!-- 导航栏数据库存在几个属性：图片编码，图片地址，导航名称，和导航概述 -->
+<view class="mainview_navigation" >
+ 
+           <!-- 导航栏：分为图片和文字  -->
+    <navigator 
+    wx:for="{{navigationList}}" 
+    wx:key="num" 
+    class="navigationTotal {{index%2==0?'addBoderRight':''}}" 
+    data-item="{{item.name}}"
+    url= '/pages/community/community'
+    open-type="switchTab"
+    bindtap="toCommunity"
+   >
+         <!-- 左边：图片 -->
+        <view class='navigation_img'>
+            <image  src="{{item.url}}" mode="widthFix"></image>
+        </view> 
+        <!-- 右边：文字说明 -->
+        <view class='navigation_words'> 
+            <p class='navigation_name'>{{item.name}}</p>
+            <p class='navigation_tips'>{{item.tips}}</p>
+        </view>
+    </navigator>
+</view>
+<!-- 导航栏结束 -->
+<!-- tabbar -->
+</view>    
+

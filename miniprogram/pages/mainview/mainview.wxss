@@ -1,0 +1,61 @@
+/* pages/community/mainview.wxss */
+/* swiper:150*100%
+image:240*320
+tupian:370*1151 */
+.addBoderRight {
+  border-right: 1rpx solid var(--themeColor);
+}
+swiper {
+  width: 100%;
+  height: 32.18vw;
+}
+swiper-item image {
+  width: 100%;
+}
+.mainview_navigation {
+  margin: 10rpx;
+  height: 700rpx;
+  width: clac(80%);
+  background-color: #fff;
+  border-radius: 20rpx;
+  border: 1px solid var(--themeColor);
+}
+.mainview_navigation .navigationTotal {
+  float: left;
+  margin-left: 20rpx;
+  width: calc(50% - 22rpx);
+  height: 150rpx;
+  border-bottom: 1rpx solid var(--themeColor);
+  margin-bottom: 13rpx;
+}
+.mainview_navigation .navigationTotal .navigation_img {
+  float: left;
+  width: 80rpx;
+  height: 100%;
+  text-align: center;
+  margin-right: 10rpx;
+}
+.mainview_navigation .navigationTotal .navigation_img image {
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+  width: 70rpx;
+}
+.mainview_navigation .navigationTotal .navigation_words {
+  margin-left: 40rpx;
+  float: left;
+  width: 180rpx;
+  height: 100%;
+}
+.mainview_navigation .navigationTotal .navigation_words .navigation_name {
+  display: block;
+  height: 20rpx;
+  font-size: 22rpx;
+  line-height: 20rpx;
+  padding-top: 30rpx;
+}
+.mainview_navigation .navigationTotal .navigation_words .navigation_tips {
+  font-size: 16rpx;
+  color: #5E616D;
+  line-height: 18rpx;
+  padding-top: 20rpx;
+}

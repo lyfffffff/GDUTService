@@ -1,0 +1,90 @@
+
+.userInfo {
+  height: 160rpx;
+  background-color: var(--themeColor);
+}
+.userInfo .showInfo {
+  margin-left:30rpx;
+  display:flex;
+  float:left;
+  justify-content:center;
+  width:320rpx;
+  height:120rpx;
+  /* border:1px red solid; */
+}
+.userInfo .showInfo image {
+  width: 120rpx;
+  height: 120rpx;
+}
+.userInfo .showInfo .defaultName{
+  padding-left:30rpx;
+  line-height:120rpx;
+  font-size:35rpx;
+}
+.userInfo .getRight{
+  float:right;
+  display:block;
+  /* border:1px red solid; */
+  width:160rpx;
+  height:120rpx;
+}
+.userInfo .getRight .toLogin {
+  margin-top:20rpx;
+  width: 160rpx;
+  height: 60rpx;
+  border-radius: 50rpx 0 0 50rpx;
+  border: 16rpx solid #87CEFA;
+  color: #fff;
+  font-size: 30rpx; 
+  letter-spacing: 6rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  text-align: center;
+  margin-right: 30rpx;
+}
+page{
+ background: #f3f7f7;
+}
+.user_content{
+margin-top:40rpx;
+position:relative;
+}
+.user_main{
+position:absolute;
+width:90%;
+left:50%;
+transform:translateX(-50%)
+}
+
+.user_publish{
+background-color:#fff;
+display:flex;
+height:150rpx;
+
+}
+.user_publish navigator{
+flex:1;
+text-align:center;
+line-height:150rpx;
+border-radius:20rpx;
+background-color: #fff;
+font-size: 35rpx;
+}
+
+.app_info_warp{
+  margin-top: 200rpx;
+  border-color: #fff;
+  font-size: 35rpx;
+
+}
+
+.app_info_item{
+  padding: 30rpx;
+  border-bottom: 1rpx solid #ccc;
+
+}
+.app_info_contact{
+  display: flex;
+  justify-content: space-between;
+
+}

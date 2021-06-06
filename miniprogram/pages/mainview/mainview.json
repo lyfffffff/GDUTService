@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SearchInput":"../../components/SearchInput/SearchInput",
+    "ShowSwiper":"../../components/ShowSwiper/ShowSwiper"
+  }
+  
+}

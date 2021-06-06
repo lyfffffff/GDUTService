@@ -1,0 +1,19 @@
+// less使用法则：
+// 1，声明less变量
+// 2，使用less变量
+// 3，嵌套
+// 4，使用@import直接导入其他less文件
+
+
+@color:yellow;
+text{
+    color:@color;
+}
+
+view{
+    .view1{
+        text{
+            color:red;
+        }
+    }
+}

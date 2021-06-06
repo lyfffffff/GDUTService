@@ -1,0 +1,31 @@
+<!--pages/feedback/feedback.wxml-->
+<Tabs tabs="{{tabs}}" bind:tabsItemChange="contentChange">
+   <block wx:if="{{tabs[0].isActive}}">
+	<form bindsubmit="fromSubmit" bindreset="fromReset">
+  <view class="tr"> 
+  <view class="title">内容:</view>
+  <textarea placeholder="10~300字" placeholder-class="placeholder" name="feedback_content"></textarea>
+   </view> 
+   <button class="submit" form-type="submit"  style="width: 280rpx;">提交</button>
+   <button class="submit" form-type="reset" style="width: 280rpx;">重置</button>
+  </form>
+		</block>
+		<block wx:else>
+			<view class="feedback_content">
+				<view class="feedback_item" wx:for="{{feedbackList}}">
+            {{item.feedback_content}}
+            <p class="feedback">已反馈</p>
+            </view>
+</view>
+		</block>
+		
+		</Tabs>
+
+	
+
+
+   
+  <!-- <button class="submit"style="width: 280rpx;" bindtap="getFeedback">获取</button> -->
+
+
+

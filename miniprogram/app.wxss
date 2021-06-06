@@ -1,0 +1,16 @@
+
+
+/* 微信小程序不支持通配符 */
+view,page,text,swiper,swiper-item,image,navigator{
+padding:0px;
+margin:0px;
+box-sizing:0px;
+}
+
+/* 定义主题颜色 */
+
+page{
+    --themeColor:#1296DB;
+}
+
+@import './style/style.wxss'

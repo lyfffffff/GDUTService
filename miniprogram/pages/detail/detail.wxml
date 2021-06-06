@@ -1,0 +1,82 @@
+<!-- <view class="main_view">
+  <view class="main_info">
+  <view class="user_info">
+    <image src="../../images/default_Avatar.png" mode="widthFix"></image>
+    <view class="user_show">
+    <view class="username">username</view>
+    <view class="default">发布了动态</view>
+  </view>
+  </view>
+    <view class="info_info">
+      <view class="info_title">找人拿快递</view>
+       <view class="main_content">
+       <view class="info_content">找一个内容哈哈哈哈哈哈哈哈哈哈哈哈哈为什么要做到既费时费舒适的办法发个费用</view>
+       <view class="other_content">
+       <view class="tr">
+       <image class="content_title" src="../../images/phone.png" mode="widthFix"></image>
+       <view class="content_content">15521056723</view>
+      </view>
+      <view class="tr">
+        <image  src="../../images/price.png" mode="widthFix"></image>
+       <view class="content_content">15</view>
+      </view>
+      <view class="tr">
+        <image src="../../images/startdate.png" mode="widthFix"></image>
+       <view class="content_content">明晚八点</view>
+      </view>
+      <view class="tr">
+        <image src="../../images/enddate.png" mode="widthFix"></image>
+       <view class="content_content">明晚九点</view>
+      </view>
+       </view>
+      </view>
+    </view>
+  </view>
+  <view class="collect">
+ <image src="{{url}}" mode="widthFix" catchtap="collectInfo"  data-msg="{{url}}"></image>
+ <text>喜欢可以点亮收藏哦~</text>
+  </view>
+</view> -->
+
+<view class="main_view">
+  <view class="main_info">
+  <view class="user_info">
+    <image src="../../images/default_Avatar.png" mode="widthFix"></image>
+    <view class="user_show">
+    <view class="username">{{info_username}}</view>
+    <view class="default">发布了动态</view>
+  </view>
+  </view>
+    <view class="info_info">
+      <view class="info_title">
+      <view class="title">{{info_title}} </view>
+      <view class="theme">{{cates_name}}</view>
+      </view>
+       <view class="main_content">
+       <view class="info_content">{{info_content}}</view>
+       <view class="other_content">
+       <view class="tr">
+       <image class="content_title" src="../../images/phone.png" mode="widthFix"></image>
+       <view class="content_content">{{info_phone}}</view>
+      </view>
+      <view class="tr">
+        <image  src="../../images/price.png" mode="widthFix"></image>
+       <view class="content_content">{{info_price}}</view>
+      </view>
+      <view class="tr">
+        <image src="../../images/startdate.png" mode="widthFix"></image>
+       <view class="content_content">{{info_datestart}}</view>
+      </view>
+      <view class="tr">
+        <image src="../../images/enddate.png" mode="widthFix"></image>
+       <view class="content_content">{{info_dateend}}</view>
+      </view>
+       </view>
+      </view>
+    </view>
+  </view>
+  <view class="collect">
+ <image src="{{src}}" mode="widthFix" catchtap="collectInfo"  data-msg="{{src}}"></image>
+ <text>喜欢可以点亮收藏哦~</text>
+  </view>
+</view>

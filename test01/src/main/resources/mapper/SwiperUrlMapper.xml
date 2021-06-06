@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.demo.mapper.SwiperUrlMapper">
+    <!--//针对mybatis
+    1,修改namespace-指向哪一个mapper：返回类型
+    2，修改resultType-返回类型
+    3，id：与mapper里的方法一致
+    -->
+    <select id="findAll" resultType="com.test.demo.entity.SwiperUrl">
+        SELECT * FROM swiper_url;
+    </select>
+</mapper>

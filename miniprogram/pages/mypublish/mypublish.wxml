@@ -1,0 +1,141 @@
+<!--pages/mypublish/mypublish.wxml-->
+ <!-- <navigator class="info_main" src="/pages/update/update">
+       头像和微信昵称
+      <view class="left_info">
+      <image src="../../images/default_Avatar.png" mode="widthFix"></image>
+      <view class='defaultName'>gdutpeople</view>
+      </view>
+        右侧内容
+        <view class="right_info">
+        标题和内容
+        <view class="main_content">
+          <view class="info_title">找人打印
+          </view>
+          <p class="info_content">找人打印找人打印找人打印找人打印找人打印找人打印</p>
+        </view>
+        按钮和选项
+        <view class="main_button">
+        <navigator url="/pages/change/change">修改</navigator>
+        <navigator bindtap="isDelete">删除</navigator>
+        </view>
+        </view>
+</navigator>
+<navigator class="info_main" src="/pages/update/update">
+       头像和微信昵称
+      <view class="left_info">
+      <image src="../../images/default_Avatar.png" mode="widthFix"></image>
+      <view class='defaultName'>gdutpeople</view>
+      </view>
+        右侧内容
+        <view class="right_info">
+        标题和内容
+        <view class="main_content">
+          <view class="info_title">找人拿快递
+          </view>
+          <p class="info_content">找人拿快递找人拿快递找人拿快递找人拿快递找人拿快递</p>
+        </view>
+        按钮和选项
+        <view class="main_button">
+        <navigator url="/pages/change/change">修改</navigator>
+        <navigator bindtap="isDelete">删除</navigator>
+        </view>
+        </view>
+</navigator>
+<navigator class="info_main" src="/pages/update/update">
+       头像和微信昵称
+      <view class="left_info">
+      <image src="../../images/default_Avatar.png" mode="widthFix"></image>
+      <view class='defaultName'>gdutpeople</view>
+      </view>
+        右侧内容
+        <view class="right_info">
+        标题和内容
+        <view class="main_content">
+          <view class="info_title">找人搬行李
+          </view>
+          <p class="info_content">找人搬行李找人搬行李找人搬行李找人搬行李</p>
+        </view>
+        按钮和选项
+        <view class="main_button">
+        <navigator url="/pages/change/change">修改</navigator>
+        <navigator bindtap="isDelete">删除</navigator>
+        </view>
+        </view>
+</navigator>
+<navigator class="info_main" src="/pages/update/update">
+       头像和微信昵称
+      <view class="left_info">
+      <image src="../../images/default_Avatar.png" mode="widthFix"></image>
+      <view class='defaultName'>gdutpeople</view>
+      </view>
+        右侧内容
+        <view class="right_info">
+        标题和内容
+        <view class="main_content">
+          <view class="info_title">出闲置
+          </view>
+          <p class="info_content">出闲置出闲置出闲置出闲置出闲置出闲置</p>
+        </view>
+        按钮和选项
+        <view class="main_button">
+        <navigator url="/pages/change/change">修改</navigator>
+        <navigator bindtap="isDelete">删除</navigator>
+        </view>
+        </view>
+</navigator>
+<navigator class="info_main" src="/pages/update/update">
+       头像和微信昵称
+      <view class="left_info">
+      <image src="../../images/default_Avatar.png" mode="widthFix"></image>
+      <view class='defaultName'>gdutpeople</view>
+      </view>
+        右侧内容
+        <view class="right_info">
+        标题和内容
+        <view class="main_content">
+          <view class="info_title">周五游园会
+          </view>
+          <p class="info_content">周五下午在高场、史诗游园会，欢迎前来围观</p>
+        </view>
+        按钮和选项
+        <view class="main_button">
+        <navigator url="/pages/change/change">修改</navigator>
+        <navigator bindtap="isDelete">删除</navigator>
+        </view>
+        </view>
+</navigator>
+ -->
+
+<!--pages/mypublish/mypublish.wxml-->
+<view wx:if="{{record}}">
+<image src="../../images/record.png" mode="widthFix" class="recordI"></image>
+<view class="recordT">暂时无记录哦~</view>
+</view>
+<view wx:else>
+<navigator class="info_main" wx:for="{{userList}}" wx:key="info_id" url="/pages/detail/detail?info_id={{item.info_id}}&username={{item.username}}&info_title={{item.info_title}}&info_content={{item.info_content}}&info_phone={{item.info_phone}}&info_price={{item.info_price}}&info_datestart={{item.info_datestart}}&info_dateend={{item.info_dateend}}&cates_name={{item.cates_name}}">
+       <!-- 头像和微信昵称 -->
+      <view class="left_info">
+      <image src="../../images/default_Avatar.png" mode="widthFix"></image>
+      <view class='defaultName'>{{username}}</view>
+      </view>
+        <!-- 右侧内容 -->
+        <view class="right_info">
+        <!-- 标题和内容 -->
+        <view class="main_content">
+          <view class="info_title">{{item.info_title}}
+          </view>
+          <p class="info_content">{{item.info_content}}</p>
+        </view>
+        <!-- 按钮和选项 -->
+        <view class="main_button">
+        <navigator class="button" catchtap="isUpdate"  url='/pages/update/update?info_id={{item.info_id}}&username={{item.username}}&info_title={{item.info_title}}&info_content={{item.info_content}}&info_phone={{item.info_phone}}&info_price={{item.info_price}}&info_datestart={{item.info_datestart}}&info_dateend={{item.info_dateend}}&cates_name={{item.cates_name}}' open-type="redirect">修改</navigator>
+        <view class="button" catchtap="isDelete" data-name="{{item.info_id}}">删除</view>
+        </view>
+        </view>
+</navigator>
+</view>
+<!-- <navigator  url="/pages/detail/detail?cates_name={{cates_name}}&info_title={{info_title}}" style="border:1px solid red;background:pink;width:200px;height:100px">
+<navigator class="button" catchtap="isUpdate" url="/pages/update/update?cates_name={{cates_name}}&info_title={{info_title}}">去修改</navigator> -->
+
+<!-- <navigator class="button" catchtap="isDelete" data-name="{{info_id}}">去删除</navigator>
+</navigator> -->

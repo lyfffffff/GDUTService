@@ -1,0 +1,8 @@
+/* components/ShowSwiper/ShowSwiper.wxss */
+swiper {
+  width: 100%;
+  height: 32.18vw;
+}
+swiper-item image {
+  width: 100%;
+}

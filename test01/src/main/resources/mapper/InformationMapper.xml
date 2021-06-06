@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.demo.mapper.InformationMapper">
+    <!--//针对mybatis
+    1,修改namespace-指向哪一个mapper：返回类型
+    2，修改resultType-返回类型
+    3，id：与mapper里的方法一致
+    -->
+    <select id="find101All" resultType="com.test.demo.entity.Information">
+        SELECT * FROM information_table WHERE cates_id=101;
+    </select>
+    <select id="find102All" resultType="com.test.demo.entity.Information">
+        SELECT * FROM information_table WHERE cates_id=102;
+    </select>
+
+<!--    <insert id="create" parameterType="com.test.demo.entity.InformationParent">-->
+<!--        insert into catetype_table-->
+<!--            (-->
+<!--             cate_id,-->
+<!--             cate_name-->
+<!--            )-->
+<!--            values (-->
+<!--                    #{cateId},-->
+<!--                    #{cateName}-->
+<!--                   )-->
+<!--    </insert>-->
+</mapper>

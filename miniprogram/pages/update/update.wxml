@@ -1,0 +1,75 @@
+<!--pages/publish/publish.wxml-->
+<!-- 轮播图开始 -->
+
+<ShowSwiper/>  
+<!-- 轮播图结束 -->
+<!-- 背景开始 -->
+<image src="../../images/bg.jpg" mode="scaleToFill" class="background"></image>
+<!-- 背景结束 -->
+
+<!-- 注册表单开始 -->
+<view class="theTable">
+<form bindsubmit="fromSubmit" bindreset="fromReset">
+  <!-- 表头开始 -->
+  <caption>点击修改信息</caption>
+  <!-- 表头结束 -->
+
+  <!-- 各项输入表单开始 -->
+ 
+  <!-- 主题输入开始 -->
+  <view class="tr"> 
+  <text class="title">主题:</text>
+  <input type="text" placeholder-class="placeholder" bindblur="bindTitleBlur" name="info_title" model:value="{{info_title}}"/><text style="color:{{color1}}">*</text>
+  </view> 
+  <!-- 主题输入结束 --> 
+  <view class="tr"> 
+  <text class="title">电话:</text>
+  <input type="text" placeholder-class="placeholder" name="info_phone" bindblur="bindPhoneBlur" model:value="{{info_phone}}"/><text style="color:{{color2}}">*</text>
+</view> 
+<view class="tr"> 
+  <text class="title">价格:</text>
+  <input type="text" placeholder-class="placeholder" name="info_price" model:value="{{info_price}}"/><text class="default">*</text>
+</view>
+  <view class="tr"> 
+  <text class="title">开始:</text>
+  <input type="text"  id="Username" placeholder-class="placeholder" name="info_datestart" class="inputDate" model:value="{{info_datestart}}"/><text class="default">*</text>
+</view> 
+<view class="tr"> 
+<text class="title">结束:</text>
+  <input type="text" id="Username" placeholder="必填,如无请填无" placeholder-class="placeholder" name="info_dateend" class="inputDate" model:value="{{info_dateend}}"/><text class="default">*</text>
+</view> 
+<view class="area"> 
+  <text class="title">内容:</text>
+  <textarea maxlength="300" placeholder="10~300字符" placeholder-class="placeholder" bindblur="bindConentBulr" name="info_content" model:value="{{info_content}}"></textarea><text style="color:{{color3}}">*</text>
+   </view> 
+
+<!-- 下拉列表开始 -->
+  <view class="writePublish">
+    <!-- 左侧：挑选主题开始 -->
+    <view class="pickTheme">挑选类型</view>
+    <!-- 左侧：挑选主题开始 -->
+    <!-- 右侧：下拉框开始 -->
+    <view class="select_box">
+    <view class="select" catchtap='bindShowCategory'>
+      <text class="select_text">{{selectData[index]}}</text>
+      <image class="down {{show&&'select_img_rotate'}}" src="../../images/down.png"></image>
+    </view>
+    <!-- 右侧：下拉框结束 -->
+      <!-- 右侧：下拉列表项开始 -->
+      <view class="option_box" style="height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;">
+        <text style="{{index==selectData.length-1&&'border:0;'}}" wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' class="option" catchtap='mySelect'>{{item}}</text>
+      </view> 
+      <!-- 右侧：下拉列表项结束 -->
+  </view>
+  </view>
+  <!-- 下拉列表结束 -->
+
+   <!-- 各项输入表单结束 -->
+   <view class="btn">
+   <button class="submit" form-type="submit">修改</button>
+  </view>
+</form>
+</view>
+
+
+

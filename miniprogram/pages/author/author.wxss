@@ -1,0 +1,62 @@
+/* pages/author/author.wxss */
+/* pages/login/login.wxss */
+button{
+  margin-top: 35px;
+  margin-left: 25px;
+  margin-right: 25px;
+  height: 45px; 
+  width:70%
+}
+.totalView {
+ margin: 90rpx 50rpx 90rpx 50rpx; /*上右下左*/
+  }
+  
+.imageView{
+  display: block;
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  margin-bottom: 0px;
+  height: 50px;
+  }
+  
+.vxLogo{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  }
+  
+  .titleText{
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #020e0f;
+  text-align: center;
+  }
+  
+  .contentText{
+  margin-left: 25px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  }
+  .toLogin{
+    /* border: 1px red solid; */
+    margin-top: 150rpx;
+    font-size:35rpx;
+  }
+  .button{
+    display: block;
+    width: 400rpx;
+    height: 100rpx;
+    background-color: #53e099;
+    border-radius: 20rpx;
+    margin-bottom: 20rpx;
+    margin-left: 150rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 100rpx;
+  }

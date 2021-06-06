@@ -1,0 +1,27 @@
+<!--pages/mycollect/mycollect.wxml-->
+<view wx:if="{{record}}">
+<image src="../../images/record.png" mode="widthFix" class="recordI"></image>
+<view class="recordT">暂时无记录哦~</view>
+</view>
+<view wx:else>
+<navigator class="info_main" wx:for="{{collectList}}" wx:key="info_id" url="/pages/detail/detail?username={{item.username}}&info_title={{item.info_title}}&info_content={{item.info_content}}&info_price={{item.info_price}}&info_phone={{item.info_phone}}&info_datestart={{item.info_dateend}}&info_dateend={{item.info_dateend}}&info_id={{item.info_id}}&cates_name={{item.cates_name}}">
+       <!-- 头像和微信昵称 -->
+      <view class="left_info">
+      <image src="../../images/default_Avatar.png" mode="widthFix"></image>
+      <view class='defaultName'>{{item.username}}</view>
+      </view>
+        <!-- 右侧内容 -->
+        <view class="right_info">
+        <!-- 标题和内容 -->
+        <view class="main_content">
+          <view class="info_title">{{item.info_title}}
+          </view>
+          <p class="info_content">{{item.info_content}}</p>
+        </view>
+        <!-- 按钮和选项 -->
+        <view class="main_button">
+        <navigator catchtap="isDelete" data-name="{{item.info_id}}" class="button">取消收藏</navigator>
+        </view>
+        </view>
+</navigator>
+</view>
